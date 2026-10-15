@@ -41,6 +41,7 @@ body{margin:0;background:#EEF0EC;overflow-wrap:break-word}
 img,svg{max-width:100%}
 img{height:auto}
 a{color:#5A2F4B}a:hover{color:#3E1F33}
+main:focus{outline:none}
 :focus-visible{outline:3px solid #5A2F4B;outline-offset:3px;border-radius:2px}
 .on-dark :focus-visible{outline-color:#FFFFFF}
 .skip{position:absolute;left:16px;top:-100px;z-index:10;background:#FFFFFF;color:#3A2234;padding:12px 18px;border-radius:6px;font-weight:600;text-decoration:none}
@@ -89,7 +90,7 @@ a{color:#5A2F4B}a:hover{color:#3E1F33}
 </div>
 </header>
 
-<main id="main">
+<main id="main" tabindex="-1">
 
 <section id="top" style="max-width: 1200px; margin: 0 auto; padding: 88px 24px 80px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
 <div style="flex: 999 1 560px; min-width: 0">
