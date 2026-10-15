@@ -1,1199 +1,316 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QKW5493R5L"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-QKW5493R5L');
-</script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Doing it for Doris | Social Care Consulting</title>
-<meta name="description" content="Expert consulting for health and social care organisations. Digital transformation, data strategy, AI and change management, with over 17 years of sector experience.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
+<title>Data, integration and AI for UK health and social care | Doing it for Doris</title>
+<meta name="description" content="Practical data, integration, automation and AI support for UK health and social care providers. Joined-up systems, reporting you can trust and AI that takes on the admin, under your own governance.">
+<link rel="canonical" href="https://doingitfordoris.com/">
+<meta name="theme-color" content="#EEF0EC">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/public-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/newsreader-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:site_name" content="Doing it for Doris Consulting">
+<meta property="og:title" content="Data, integration and AI for UK health and social care | Doing it for Doris">
+<meta property="og:description" content="Practical data, integration, automation and AI support for UK health and social care providers. Joined-up systems, reporting you can trust and AI that takes on the admin, under your own governance.">
+<meta property="og:url" content="https://doingitfordoris.com/">
+<meta property="og:image" content="https://doingitfordoris.com/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Doing it for Doris Consulting: Joined-up data. Connected systems. AI that does the admin.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Data, integration and AI for UK health and social care | Doing it for Doris">
+<meta name="twitter:description" content="Practical data, integration, automation and AI support for UK health and social care providers. Joined-up systems, reporting you can trust and AI that takes on the admin, under your own governance.">
+<meta name="twitter:image" content="https://doingitfordoris.com/assets/og-image.png">
 <style>
-  :root {
-    --ink: #1a1a2e;
-    --warm: #f5f0e8;
-    --accent: #c8553d;
-    --accent-light: #e8b4a8;
-    --slate: #4a5568;
-    --mid: #8a9ab0;
-    --rule: #ddd5c8;
-    --white: #ffffff;
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--warm);
-    color: var(--ink);
-    font-weight: 300;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
-
-  /* ─── NAV ─── */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    padding: 0 5%;
-    height: 72px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: rgba(245, 240, 232, 0.97);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--rule);
-    transition: box-shadow 0.3s;
-  }
-
-  nav.scrolled { box-shadow: 0 2px 20px rgba(0,0,0,0.08); }
-
-  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-  .nav-logo svg { height: 40px; width: auto; }
-  .nav-logo-text {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.1rem;
-    color: var(--ink);
-    line-height: 1.2;
-  }
-  .nav-logo-text span { display: block; font-size: 0.65rem; font-family: 'DM Sans', sans-serif; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate); font-weight: 500; }
-
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
-  .nav-links a {
-    text-decoration: none;
-    color: var(--slate);
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--accent); }
-
-  .nav-cta {
-    background: var(--accent);
-    color: var(--white) !important;
-    padding: 0.45rem 1.2rem;
-    border-radius: 2px;
-    transition: background 0.2s !important;
-  }
-  .nav-cta:hover { background: #a8432c !important; color: var(--white) !important; }
-
-  .nav-hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-  .nav-hamburger span { display: block; width: 24px; height: 2px; background: var(--ink); transition: 0.3s; }
-
-  /* ─── HERO ─── */
-  .hero {
-    min-height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    position: relative;
-    overflow: hidden;
-    margin-top: -72px;
-  }
-
-  .hero-left {
-    padding: calc(72px + 6%) 6% 8% 8%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero-eyebrow {
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 500;
-    margin-bottom: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-  .hero-eyebrow::before { content: ''; display: block; width: 32px; height: 1px; background: var(--accent); }
-
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(2.6rem, 5vw, 4.2rem);
-    line-height: 1.1;
-    color: var(--ink);
-    margin-bottom: 1.5rem;
-    font-weight: 700;
-  }
-
-  .hero h1 em {
-    font-style: italic;
-    color: var(--accent);
-  }
-
-  .hero-lead {
-    font-size: 1.1rem;
-    color: var(--slate);
-    max-width: 480px;
-    margin-bottom: 2.5rem;
-    line-height: 1.8;
-  }
-
-  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
-
-  .btn-primary {
-    background: var(--accent);
-    color: var(--white);
-    padding: 0.85rem 2rem;
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    border-radius: 2px;
-    transition: background 0.2s, transform 0.2s;
-    display: inline-block;
-  }
-  .btn-primary:hover { background: #a8432c; transform: translateY(-1px); }
-
-  .btn-secondary {
-    color: var(--ink);
-    padding: 0.85rem 2rem;
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    border: 1px solid var(--rule);
-    border-radius: 2px;
-    transition: border-color 0.2s, color 0.2s;
-    display: inline-block;
-  }
-  .btn-secondary:hover { border-color: var(--ink); }
-
-  .hero-right {
-    background: var(--ink);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .hero-right-inner {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: calc(72px + 4rem) 3rem 4rem;
-    gap: 3rem;
-  }
-
-  .hero-pattern {
-    position: absolute;
-    inset: 0;
-    background-image:
-      radial-gradient(circle at 30% 20%, rgba(200, 85, 61, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 70% 80%, rgba(200, 85, 61, 0.1) 0%, transparent 40%);
-  }
-
-  .hero-grid-lines {
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
-  }
-
-  .hero-stat-block {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1px;
-    width: 100%;
-    max-width: 480px;
-    border: 1px solid rgba(255,255,255,0.1);
-    background: rgba(255,255,255,0.04);
-    backdrop-filter: blur(4px);
-    border-radius: 2px;
-    overflow: hidden;
-  }
-
-  .hero-stat {
-    padding: 1.5rem;
-    border-right: 1px solid rgba(255,255,255,0.08);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
-  .hero-stat:nth-child(2n) { border-right: none; }
-  .hero-stat:nth-child(3), .hero-stat:nth-child(4) { border-bottom: none; }
-
-  .hero-stat-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
-    color: var(--white);
-    line-height: 1;
-    margin-bottom: 0.3rem;
-  }
-  .hero-stat-num span { color: var(--accent); }
-
-  .hero-stat-label {
-    font-size: 0.7rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
-  }
-
-  .hero-quote {
-    margin-bottom: 0;
-    text-align: center;
-    max-width: 480px;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-
-  .hero-quote p {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 1.5rem;
-    color: rgba(255,255,255,0.9);
-    line-height: 1.6;
-  }
-
-  /* ─── SECTION SCAFFOLDING ─── */
-  section { padding: 7rem 8%; }
-
-  .section-label {
-    font-size: 0.7rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 500;
-    margin-bottom: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-  .section-label::before { content: ''; display: block; width: 24px; height: 1px; background: var(--accent); }
-
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
-    color: var(--ink);
-    line-height: 1.2;
-    margin-bottom: 1.5rem;
-  }
-
-  .section-body {
-    color: var(--slate);
-    max-width: 620px;
-    font-size: 1.05rem;
-    line-height: 1.85;
-  }
-
-  .rule { height: 1px; background: var(--rule); margin: 0 8%; }
-
-  /* ─── DORIS SECTION ─── */
-  .doris-section {
-    background: var(--ink);
-    color: var(--white);
-    padding: 7rem 8%;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .doris-section::before {
-    content: '"';
-    position: absolute;
-    top: -2rem;
-    left: 6%;
-    font-family: 'Playfair Display', serif;
-    font-size: 20rem;
-    color: rgba(200, 85, 61, 0.08);
-    line-height: 1;
-    pointer-events: none;
-  }
-
-  .doris-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: center;
-    position: relative;
-    z-index: 2;
-  }
-
-  .doris-left .section-label { color: var(--accent); }
-  .doris-left .section-title { color: var(--white); }
-
-  .doris-text {
-    color: rgba(255,255,255,0.72);
-    font-size: 1.05rem;
-    line-height: 1.85;
-    margin-bottom: 1.5rem;
-  }
-
-  .doris-card {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-left: 3px solid var(--accent);
-    border-radius: 2px;
-    padding: 2rem 2.5rem;
-  }
-
-  .doris-card-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    color: var(--white);
-    margin-bottom: 0.5rem;
-  }
-
-  .doris-card-desc {
-    color: rgba(255,255,255,0.6);
-    font-size: 0.9rem;
-    line-height: 1.7;
-    margin-bottom: 1.5rem;
-  }
-
-  .doris-card-traits {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-  }
-
-  .doris-trait {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    font-size: 0.88rem;
-    color: rgba(255,255,255,0.65);
-  }
-
-  .doris-trait::before {
-    content: '';
-    display: block;
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--accent);
-    margin-top: 0.4rem;
-    flex-shrink: 0;
-  }
-
-  /* ─── SERVICES ─── */
-  .services-section { background: var(--white); }
-
-  .services-header {
-    max-width: 680px;
-    margin-bottom: 2.5rem;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    background: var(--rule);
-    border: 1px solid var(--rule);
-  }
-
-  .service-card {
-    background: var(--white);
-    padding: 2.5rem 2rem;
-    transition: background 0.25s;
-    position: relative;
-  }
-
-  .service-card:hover { background: var(--warm); }
-
-  .service-icon {
-    width: 40px;
-    height: 40px;
-    margin-bottom: 1.2rem;
-    color: var(--accent);
-  }
-
-  .service-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.15rem;
-    color: var(--ink);
-    margin-bottom: 0.75rem;
-    font-weight: 700;
-  }
-
-  .service-card p {
-    font-size: 0.88rem;
-    color: var(--slate);
-    line-height: 1.75;
-  }
-
-  /* ─── EXPERIENCE ─── */
-  .experience-section { background: var(--warm); }
-
-  .exp-narrative {
-    max-width: 100%;
-    margin-bottom: 3.5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem 5rem;
-    align-items: start;
-  }
-
-  .exp-narrative h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    color: var(--ink);
-    margin-bottom: 1rem;
-    grid-column: 1 / -1;
-  }
-
-  .exp-narrative p {
-    color: var(--slate);
-    font-size: 0.95rem;
-    line-height: 1.85;
-    margin-bottom: 0;
-  }
-
-
-  .exp-items-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: var(--rule);
-    border: 1px solid var(--rule);
-  }
-
-  .exp-item {
-    position: relative;
-    padding: 2rem 2rem 2rem 2.5rem;
-    background: var(--warm);
-    border-left: 3px solid transparent;
-    transition: border-color 0.2s, background 0.2s;
-  }
-
-  .exp-item:hover {
-    border-left-color: var(--accent);
-    background: var(--white);
-  }
-
-  .exp-dot { display: none; }
-
-  .exp-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.05rem;
-    color: var(--ink);
-    margin-bottom: 0.3rem;
-    font-weight: 700;
-  }
-
-  .exp-org {
-    font-size: 0.82rem;
-    color: var(--accent);
-    font-weight: 500;
-    margin-bottom: 0.75rem;
-    letter-spacing: 0.02em;
-  }
-
-  .exp-desc {
-    font-size: 0.85rem;
-    color: var(--slate);
-    line-height: 1.7;
-  }
-
-  /* ─── BRANDS ─── */
-  .brands-section { background: var(--white); }
-
-  .brands-intro {
-    max-width: 640px;
-    color: var(--slate);
-    font-size: 1.05rem;
-    line-height: 1.85;
-    margin-bottom: 3rem;
-  }
-
-  .brand-category { margin-bottom: 2.5rem; }
-
-  .brand-cat-label {
-    font-size: 0.7rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--mid);
-    font-weight: 500;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--rule);
-  }
-
-  .brand-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  .brand-tag {
-    background: var(--warm);
-    border: 1px solid var(--rule);
-    border-radius: 2px;
-    padding: 0.4rem 0.9rem;
-    font-size: 0.82rem;
-    color: var(--slate);
-    font-weight: 400;
-  }
-
-  /* ─── APPROACH ─── */
-  .approach-section {
-    background: var(--ink);
-    padding: 7rem 8%;
-    position: relative;
-  }
-
-  .approach-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-    margin-top: 3.5rem;
-  }
-
-  .approach-item {}
-
-  .approach-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    color: rgba(200, 85, 61, 0.3);
-    line-height: 1;
-    margin-bottom: 1rem;
-  }
-
-  .approach-item h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
-    color: var(--white);
-    margin-bottom: 0.75rem;
-  }
-
-  .approach-item p {
-    font-size: 0.88rem;
-    color: rgba(255,255,255,0.55);
-    line-height: 1.8;
-  }
-
-  .approach-section .section-title { color: var(--white); }
-
-  /* ─── CONTACT ─── */
-  .contact-section {
-    background: var(--warm);
-    padding: 7rem 8%;
-  }
-
-  .contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: start;
-  }
-
-  .contact-col-left { display: flex; flex-direction: column; gap: 1.25rem; }
-  .contact-col-left .section-label { margin-bottom: 0; }
-  .contact-col-left .section-title { margin-bottom: 0; }
-
-  .contact-col-right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1.25rem;
-    height: 100%;
-  }
-
-  .contact-para {
-    color: var(--slate);
-    font-size: 1rem;
-    line-height: 1.85;
-    margin: 0;
-  }
-
-  .contact-icons-row {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    padding-top: 0.5rem;
-  }
-
-  .contact-detail {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    text-decoration: none;
-    color: var(--ink);
-    transition: color 0.2s;
-  }
-  .contact-detail:hover { color: var(--accent); }
-
-  .contact-icon {
-    width: 40px;
-    height: 40px;
-    background: var(--white);
-    border: 1px solid var(--rule);
-    border-radius: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    color: var(--accent);
-  }
-
-  .contact-detail-text { font-size: 0.9rem; font-weight: 500; }
-  .contact-detail-label { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mid); }
-  .contact-icons-mobile { display: none; }
-  .contact-icons-desktop { display: flex; }
-
-
-  /* ─── FOOTER ─── */
-  footer {
-    background: var(--ink);
-    padding: 3rem 8%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .footer-copy {
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.35);
-  }
-
-  .footer-links { display: flex; gap: 1.5rem; }
-  .footer-links a {
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.35);
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  .footer-links a:hover { color: var(--accent); }
-
-  /* ─── MOBILE ─── */
-  @media (max-width: 900px) {
-    nav { padding: 0 6%; }
-    .nav-links { display: none; }
-    .nav-links.open {
-      display: flex;
-      flex-direction: column;
-      position: fixed;
-      top: 72px; left: 0; right: 0;
-      background: var(--warm);
-      padding: 2rem 6%;
-      border-bottom: 1px solid var(--rule);
-      gap: 1.5rem;
-      z-index: 99;
-    }
-    .nav-hamburger { display: flex; }
-
-    .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-left { padding: calc(72px + 3rem) 6% 3rem; }
-    .hero-right { min-height: 480px; }
-    .hero-right-inner { padding: 3rem 2rem; }
-    .hero-stat-block { max-width: 100%; }
-
-    section { padding: 5rem 6%; }
-    .rule { margin: 0 6%; }
-    .doris-section { padding: 5rem 6%; }
-    .doris-inner { grid-template-columns: 1fr; gap: 3rem; }
-    .services-header { grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2.5rem; }
-    .services-grid { grid-template-columns: 1fr; }
-    .exp-narrative { grid-template-columns: 1fr; gap: 1rem; }
-    .exp-items-grid { grid-template-columns: 1fr; }
-    .approach-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .contact-icons-row { flex-direction: column; gap: 1rem; }
-    .contact-icons-desktop { display: none; }
-    .contact-icons-mobile { display: flex; }
-    .approach-section { padding: 5rem 6%; }
-    .contact-section { padding: 5rem 6%; }
-    .doris-section::before { font-size: 10rem; }
-  }
-
-  /* ─── ANIMATIONS ─── */
-  .fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-  .fade-in.visible {
-    opacity: 1;
-    transform: none;
-  }
-
-  .fade-in-delay-1 { transition-delay: 0.1s; }
-  .fade-in-delay-2 { transition-delay: 0.2s; }
-  .fade-in-delay-3 { transition-delay: 0.3s; }
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/newsreader-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Newsreader';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/newsreader-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Newsreader';font-style:italic;font-weight:400;font-display:swap;src:url(/assets/fonts/newsreader-latin-400-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Newsreader';font-style:italic;font-weight:500;font-display:swap;src:url(/assets/fonts/newsreader-latin-500-italic.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Public Sans';font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/public-sans-latin-400-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Public Sans';font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/public-sans-latin-500-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Public Sans';font-style:normal;font-weight:600;font-display:swap;src:url(/assets/fonts/public-sans-latin-600-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:'Playfair Display';font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/playfair-display-latin-700-normal.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:#EEF0EC;overflow-wrap:break-word}
+img,svg{max-width:100%}
+img{height:auto}
+a{color:#5A2F4B}a:hover{color:#3E1F33}
+main:focus{outline:none}
+:focus-visible{outline:3px solid #5A2F4B;outline-offset:3px;border-radius:2px}
+.on-dark :focus-visible{outline-color:#FFFFFF}
+.skip{position:absolute;left:16px;top:-100px;z-index:10;background:#FFFFFF;color:#3A2234;padding:12px 18px;border-radius:6px;font-weight:600;text-decoration:none}
+.skip:focus{top:16px}
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Doing it for Doris Consulting",
+  "url": "https://doingitfordoris.com/",
+  "image": "https://doingitfordoris.com/assets/og-image.png",
+  "description": "Data, integration, automation and AI consulting for UK health and social care providers.",
+  "areaServed": {
+    "@type": "Country",
+    "name": "United Kingdom"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Phil Neilson",
+    "sameAs": [
+      "https://www.linkedin.com/in/phil-neilson/"
+    ]
+  }
+}
+</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
+<div style="background: #EEF0EC; color: #2B2B2B; font-family: 'Public Sans', system-ui, sans-serif; font-size: 18px; line-height: 1.6">
 
-<!-- ─── NAVIGATION ─── -->
-<nav id="main-nav">
-  <a href="#" class="nav-logo">
-    <!-- LOGO OPTION A (used in nav): wordmark with triangle motif -->
-    <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg">
-      <polygon points="0,32 14,8 28,32" fill="#c8553d" opacity="0.9"/>
-      <polygon points="8,32 22,8 36,32" fill="#1a1a2e" opacity="0.5"/>
-      <text x="42" y="27" font-family="'Playfair Display', serif" font-size="16" fill="#1a1a2e" font-weight="700">DifD</text>
-    </svg>
-    <div class="nav-logo-text">
-      Doing it for Doris
-      <span>Consulting</span>
-    </div>
-  </a>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#contact" class="nav-cta">Get in touch</a></li>
-  </ul>
-  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+<header style="border-bottom: 1px solid #D6DAD3; background: #EEF0EC">
+<div style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; gap: 16px 32px; align-items: center; justify-content: space-between">
+<a href="#top" aria-label="Doing it for Doris Consulting, home" style="display: flex; align-items: center; gap: 12px; text-decoration: none; color: #2B2B2B">
+<svg width="120" height="40" viewBox="0 0 120 40" aria-hidden="true"><polygon points="0,32 14,8 28,32" fill="#8A4A73" opacity="0.9"></polygon><polygon points="8,32 22,8 36,32" fill="#2B2B2B" opacity="0.5"></polygon><text x="42" y="27" font-family="'Playfair Display', Georgia, serif" font-size="16" font-weight="700" fill="#2B2B2B">DifD</text></svg>
+<span style="display: flex; flex-direction: column; line-height: 1.2; font-family: 'Playfair Display', Georgia, serif; font-size: 18px">Doing it for Doris<span style="font-family: 'Public Sans', sans-serif; font-size: 11px; letter-spacing: 1.6px; text-transform: uppercase; color: #555555; font-weight: 500">Consulting</span></span>
+</a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 8px 24px; align-items: center; font-size: 16px">
+<a href="#services" style="text-decoration: none; color: #2B2B2B">Services</a>
+<a href="#ai" style="text-decoration: none; color: #2B2B2B">AI</a>
+<a href="#approach" style="text-decoration: none; color: #2B2B2B">Approach</a>
+<a href="#doris" style="text-decoration: none; color: #2B2B2B">Why Doris</a>
+<a href="#about" style="text-decoration: none; color: #2B2B2B">About</a>
+<a href="#contact" style="text-decoration: none; background: #5A2F4B; color: #FFFFFF; padding: 12px 20px; border-radius: 6px; font-weight: 500">Start a conversation</a>
 </nav>
-
-<!-- ─── HERO ─── -->
-<section class="hero" id="home">
-  <div class="hero-left">
-    <p class="hero-eyebrow">Social Care Consulting</p>
-    <h1>Transforming care.<br><em>For those who matter most.</em></h1>
-    <p class="hero-lead">
-      Doing it for Doris brings together deep sector expertise and genuine digital capability to help health and social care organisations navigate change, harness data, and build services that actually work.
-    </p>
-    <div class="hero-actions">
-      <a href="#services" class="btn-primary">What we do</a>
-      <a href="#contact" class="btn-secondary">Start a conversation</a>
-    </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-pattern"></div>
-    <div class="hero-grid-lines"></div>
-    <div class="hero-right-inner">
-      <div class="hero-quote">
-        <p>"The sector has never needed good thinking more than it does right now."</p>
-      </div>
-      <div class="hero-stat-block">
-        <div class="hero-stat">
-          <div class="hero-stat-num">17<span>+</span></div>
-          <div class="hero-stat-label">Years sector experience</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">31<span>+</span></div>
-          <div class="hero-stat-label">Care brands worked across</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">21<span>k</span></div>
-          <div class="hero-stat-label">People in services reached</div>
-        </div>
-        <div class="hero-stat">
-          <div class="hero-stat-num">12<span>k</span></div>
-          <div class="hero-stat-label">Staff impacted</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── WHO IS DORIS ─── -->
-<div class="doris-section" id="about">
-  <div class="doris-inner">
-    <div class="doris-left">
-      <p class="section-label">Why we exist</p>
-      <h2 class="section-title">Meet Doris.</h2>
-      <p class="doris-text">
-        Doris is not a real person. She is every person. She is the 83-year-old who has waited too long for a care package. The young adult with a learning disability trying to live independently. The complex care client whose needs have outgrown the systems designed to support them.
-      </p>
-      <p class="doris-text">
-        Doris is the reason the sector exists. And she is the reason we do what we do. When organisations come to us for help with technology, data, transformation or change, we measure success by one thing: does this make life better for Doris?
-      </p>
-      <p class="doris-text">
-        That framing changes how we work. It keeps us honest, practical, and focused on outcomes that matter, not process for its own sake.
-      </p>
-    </div>
-    <div class="doris-right">
-      <div class="doris-card">
-        <div class="doris-card-name">Doris</div>
-        <div class="doris-card-desc">A composite of every person supported across the health and social care sector. The ultimate stakeholder in every project we take on.</div>
-        <div class="doris-card-traits">
-          <div class="doris-trait">Deserves care that is joined-up and dignified</div>
-          <div class="doris-trait">Is often let down by systems that weren't designed around her</div>
-          <div class="doris-trait">Benefits most when technology genuinely serves people</div>
-          <div class="doris-trait">Depends on organisations that are well-run and well-led</div>
-          <div class="doris-trait">Is at the centre of every decision we help our clients make</div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
+</header>
 
-<!-- ─── SERVICES ─── -->
-<section class="services-section" id="services">
-  <div class="services-header fade-in">
-    <div>
-      <p class="section-label">What we do</p>
-      <h2 class="section-title">Our services</h2>
-      <p class="section-body">
-        We work with boards, executive teams, and operational leadership across health and social care. Our work spans strategy through to hands-on delivery, across the full digital and change spectrum.
-      </p>
-    </div>
-  </div>
+<main id="main" tabindex="-1">
 
-  <div class="services-grid">
-
-    <div class="service-card fade-in">
-      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-      </svg>
-      <h3>Digital Transformation</h3>
-      <p>End-to-end digital change programmes designed around real-world care delivery. From strategy and architecture through to implementation and adoption. Built to land, not just launch.</p>
-    </div>
-
-    <div class="service-card fade-in fade-in-delay-1">
-      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
-      </svg>
-      <h3>Data Strategy & Analytics</h3>
-      <p>Turning care data into operational insight. Data infrastructure, dashboards, reporting frameworks and performance intelligence that drive better decisions at every level of the organisation.</p>
-    </div>
-
-    <div class="service-card fade-in fade-in-delay-2">
-      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-      </svg>
-      <h3>AI & Automation</h3>
-      <p>Practical application of AI and automation in health and social care contexts. Identifying genuine use cases, building the business case, managing risk, and implementing safely and ethically.</p>
-    </div>
-
-    <div class="service-card fade-in">
-      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
-      </svg>
-      <h3>Change Management</h3>
-      <p>Change that actually lands with the people who deliver care. Engagement frameworks, communications, training design, and readiness assessment, grounded in the operational reality of care services.</p>
-    </div>
-
-    <div class="service-card fade-in fade-in-delay-1">
-      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/>
-      </svg>
-      <h3>System Procurement & Implementation</h3>
-      <p>Sourcing, selecting and deploying care management systems, workforce tools and technology platforms. From requirements definition and supplier evaluation through to go-live and beyond.</p>
-    </div>
-
-    <div class="service-card fade-in fade-in-delay-2">
-      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
-      </svg>
-      <h3>IT Strategy & Technology Roadmaps</h3>
-      <p>Board-ready technology strategies that translate ambition into a credible plan. Infrastructure, architecture, supplier landscape and investment prioritisation. All grounded in sector realities.</p>
-    </div>
-
-    <div class="service-card fade-in">
-      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
-      </svg>
-      <h3>Supplier & Contract Management</h3>
-      <p>Holding technology suppliers to account and extracting genuine value from technology contracts. Relationship management, SLA governance, dispute resolution and renegotiation support.</p>
-    </div>
-
-    <div class="service-card fade-in fade-in-delay-1">
-      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-      </svg>
-      <h3>Operating Model & Restructure</h3>
-      <p>Designing support functions that work. Head office structure, team design, roles and governance, built around what care organisations actually need at each stage of growth.</p>
-    </div>
-
-    <div class="service-card fade-in fade-in-delay-2">
-      <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
-      </svg>
-      <h3>Service Design & Innovation</h3>
-      <p>Designing new care pathways, service models and delivery approaches. Translating strategic ambition into operational blueprints. From concept and feasibility through to pilot and scale.</p>
-    </div>
-
-  </div>
-</section>
-
-<div class="rule"></div>
-
-<!-- ─── EXPERIENCE ─── -->
-<section class="experience-section" id="experience">
-  <p class="section-label fade-in">What we bring</p>
-  <h2 class="section-title fade-in">A track record that speaks for itself</h2>
-
-  <div class="exp-narrative fade-in">
-    <h3>Seventeen years. Every care setting.</h3>
-    <p>
-      The DifD team brings over 17 years of experience working across health and social care, both as practitioners embedded inside some of the sector's largest and most complex organisations, and as consultants supporting providers to solve real operational and strategic challenges.
-    </p>
-    <p>
-      That experience spans every major care setting: homecare, extra care, complex care, supported living, learning disabilities, residential, children's and specialist services. It spans organisations at very different sizes and stages of maturity, from regional providers to national groups operating at significant scale.
-    </p>
-    <p>
-      Working at board and director level across multiple organisations, we bring the strategic clarity and the delivery credibility to operate at any level of an engagement: from shaping a three-year technology strategy to ensuring a system implementation lands well for frontline staff.
-    </p>
-    <p>
-      We also hold an active angel investment position in early-stage health and social care technology businesses and have served as a trustee in the care charity sector, which means we stay genuinely close to where the sector is heading, and understand governance as well as delivery.
-    </p>
-  </div>
-
-  <div class="exp-items-grid fade-in">
-
-    <div class="exp-item">
-      <div class="exp-dot"></div>
-      <div class="exp-title">Building a technology function from scratch</div>
-      <div class="exp-org">City &amp; County Healthcare Group</div>
-      <div class="exp-desc">At one of the UK's largest care groups: 31 operating companies, 200+ care locations, 12,000 staff, 21,000 people supported. We led digital transformation at board level, designing and building multiple new functions from the ground up: BI &amp; Reporting, Digital Learning, System Implementation, Change Management and Application Support. The work touched every part of the business, from front-line care delivery through to group-wide operational strategy.</div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-dot"></div>
-      <div class="exp-title">Driving emerging technology at national scale</div>
-      <div class="exp-org">Barnardo's</div>
-      <div class="exp-desc">Technology leadership at the UK's largest children's charity, with over 800 services across England, Scotland, Wales and Northern Ireland. Emerging technology strategy, continuous improvement and digital innovation across one of the most complex multi-site organisations in the charity sector.</div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-dot"></div>
-      <div class="exp-title">Co-founding an AI health analytics business</div>
-      <div class="exp-org">AVERio</div>
-      <div class="exp-desc">Taking a personalised AI-driven health and wellbeing analytics platform from ideation through to market-ready product, built specifically for the health and social care sector. That experience of building a technology business from within the sector shapes how we think about what is genuinely useful versus what is noise.</div>
-    </div>
-
-    <div class="exp-item">
-      <div class="exp-dot"></div>
-      <div class="exp-title">Programme and change delivery across specialist care</div>
-      <div class="exp-org">Voyage Care &amp; Allied Healthcare</div>
-      <div class="exp-desc">Change management, system implementation and operational improvement across specialist services for adults with learning disabilities, autism and acquired brain injury, and across national homecare operations serving tens of thousands of people.</div>
-    </div>
-
-  </div>
-</section>
-
-<div class="rule"></div>
-
-<!-- ─── BRANDS ─── -->
-<section class="brands-section" id="brands">
-  <p class="section-label fade-in">Sector reach</p>
-  <h2 class="section-title fade-in">Organisations we have worked with</h2>
-
-  <p class="brands-intro fade-in">
-    Across our careers we have worked alongside, led change within, or delivered consulting for a wide range of health and social care organisations. The list below reflects the scale and diversity of that experience, from national homecare groups to specialist community providers.
-  </p>
-
-  <div class="brand-category fade-in">
-    <div class="brand-cat-label">Homecare & Community</div>
-    <div class="brand-list">
-      <span class="brand-tag">Abacare</span>
-      <span class="brand-tag">Care By Us</span>
-      <span class="brand-tag">Careline Homecare</span>
-      <span class="brand-tag">Comfort Call</span>
-      <span class="brand-tag">Constance Care</span>
-      <span class="brand-tag">Custom Care</span>
-      <span class="brand-tag">Guardian Home Care</span>
-      <span class="brand-tag">Help at Home</span>
-      <span class="brand-tag">Homelife Carers</span>
-      <span class="brand-tag">Human Support Group</span>
-      <span class="brand-tag">ISS Healthcare</span>
-      <span class="brand-tag">Kent SCP</span>
-      <span class="brand-tag">London Care</span>
-      <span class="brand-tag">MiHomecare</span>
-      <span class="brand-tag">Mochridhe</span>
-      <span class="brand-tag">North East Community Care</span>
-      <span class="brand-tag">Quality Care Services</span>
-      <span class="brand-tag">SCRT</span>
-      <span class="brand-tag">Sage Care</span>
-    </div>
-  </div>
-
-  <div class="brand-category fade-in">
-    <div class="brand-cat-label">Complex Care & Supported Living</div>
-    <div class="brand-list">
-      <span class="brand-tag">Advantage Healthcare</span>
-      <span class="brand-tag">Complete Care</span>
-      <span class="brand-tag">Eclipse Homecare</span>
-      <span class="brand-tag">ICCM Cares</span>
-      <span class="brand-tag">Noble Live-in Care</span>
-      <span class="brand-tag">Raynsford Care</span>
-      <span class="brand-tag">SCP Complex</span>
-      <span class="brand-tag">Strand Nursing</span>
-      <span class="brand-tag">Total Community Care</span>
-      <span class="brand-tag">Voyage Care</span>
-      <span class="brand-tag">Acuity Care Group</span>
-    </div>
-  </div>
-
-  <div class="brand-category fade-in">
-    <div class="brand-cat-label">Extra Care & Specialist</div>
-    <div class="brand-list">
-      <span class="brand-tag">Advance Healthcare</span>
-      <span class="brand-tag">Allied Healthcare</span>
-      <span class="brand-tag">Hamilton Cross</span>
-      <span class="brand-tag">SCP Recruitment</span>
-    </div>
-  </div>
-
-  <div class="brand-category fade-in">
-    <div class="brand-cat-label">Children's & Third Sector</div>
-    <div class="brand-list">
-      <span class="brand-tag">Barnardo's</span>
-      <span class="brand-tag">Caring Connections</span>
-    </div>
-  </div>
-</section>
-
-<!-- ─── APPROACH ─── -->
-<div class="approach-section">
-  <p class="section-label" style="color: var(--accent);">How we work</p>
-  <h2 class="section-title">Our approach</h2>
-  <div class="approach-grid">
-    <div class="approach-item fade-in">
-      <div class="approach-num">01</div>
-      <h3>Honest before comfortable</h3>
-      <p>We tell clients what we actually think, not what they want to hear. That means identifying problems clearly, flagging risks early, and recommending what is right for the organisation rather than what is easiest to sell.</p>
-    </div>
-    <div class="approach-item fade-in fade-in-delay-1">
-      <div class="approach-num">02</div>
-      <h3>Operational first</h3>
-      <p>Strategy that cannot survive contact with the front line is not strategy. Everything we design is tested against the reality of care delivery. We understand rotas, risk assessments, CQC inspections, and the pressures facing care coordinators.</p>
-    </div>
-    <div class="approach-item fade-in fade-in-delay-2">
-      <div class="approach-num">03</div>
-      <h3>Doris as the measure</h3>
-      <p>Every recommendation we make is filtered through a simple question: does this ultimately improve the experience of the person being supported? Technology, data, and digital change are only worth pursuing if they serve that purpose.</p>
-    </div>
-  </div>
+<section id="top" style="max-width: 1200px; margin: 0 auto; padding: 88px 24px 80px; display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 999 1 560px; min-width: 0">
+<p style="margin: 0 0 20px; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; color: #555555">Consulting for UK health and social care</p>
+<h1 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: clamp(40px, 5.6vw, 70px); line-height: 1.06; color: #2B2B2B">Joined-up data. Connected systems. AI that does the admin.</h1>
+<p style="margin: 28px 0 0; font-size: 20px; max-width: 620px; color: #444444">Practical digital, data and AI support for UK care providers, built on years of running it from the inside. So your managers manage, your carers care, and your board sees the full picture.</p>
+<div style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center">
+<a href="#contact" style="text-decoration: none; background: #5A2F4B; color: #FFFFFF; padding: 16px 28px; border-radius: 6px; font-weight: 500">Start a conversation</a>
+<a href="#services" style="padding: 16px 4px; font-weight: 500">What we can help with</a>
 </div>
-
-
-<!-- ─── CONTACT ─── -->
-<section class="contact-section" id="contact">
-  <div class="contact-grid">
-    <div class="contact-col-left">
-      <p class="section-label">Get in touch</p>
-      <h2 class="section-title">Start a conversation.</h2>
-      <p class="contact-para">Whether you have a defined project or a challenge you are still working through, we are happy to talk. No hard sell, just a straight conversation about whether and how we can help.</p>
-      <p class="contact-para">We work with a range of organisations across health and social care, from independent and regional providers through to national groups and charities.</p>
-      <div class="contact-icons-row contact-icons-desktop">
-        <a href="mailto:Phil@DoingItForDoris.com" class="contact-detail">
-          <div class="contact-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <div>
-            <div class="contact-detail-label">Email</div>
-            <div class="contact-detail-text">Phil@DoingItForDoris.com</div>
-          </div>
-        </a>
-        <a href="https://www.linkedin.com/in/phil-neilson" target="_blank" rel="noopener" class="contact-detail">
-          <div class="contact-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
-              <circle cx="4" cy="4" r="2"/>
-            </svg>
-          </div>
-          <div>
-            <div class="contact-detail-label">LinkedIn</div>
-            <div class="contact-detail-text">Phil Neilson</div>
-          </div>
-        </a>
-      </div>
-    </div>
-    <div class="contact-col-right fade-in">
-      <p class="contact-para">Typical engagements range from a focused strategy or procurement piece through to multi-year transformation programmes. We can also provide interim and fractional leadership where that is the right model.</p>
-      <p class="contact-para">Initial conversations are always without obligation.</p>
-      <div class="contact-icons-row contact-icons-mobile">
-        <a href="mailto:Phil@DoingItForDoris.com" class="contact-detail">
-          <div class="contact-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-          </div>
-          <div>
-            <div class="contact-detail-label">Email</div>
-            <div class="contact-detail-text">Phil@DoingItForDoris.com</div>
-          </div>
-        </a>
-        <a href="https://www.linkedin.com/in/phil-neilson" target="_blank" rel="noopener" class="contact-detail">
-          <div class="contact-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
-              <circle cx="4" cy="4" r="2"/>
-            </svg>
-          </div>
-          <div>
-            <div class="contact-detail-label">LinkedIn</div>
-            <div class="contact-detail-text">Phil Neilson</div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
+</div>
+<div style="flex: 1 1 380px; min-width: 0; background: #FFFFFF; border-radius: 4px; box-shadow: 0 1px 2px rgba(40, 40, 40, 0.08); overflow: hidden">
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); font-size: 13px; letter-spacing: 1px; text-transform: uppercase; border-bottom: 1px solid #E2E5DF">
+<div style="padding: 14px 18px; color: #555555">Today</div><div style="padding: 14px 18px; border-left: 1px solid #E2E5DF; color: #5A2F4B; font-weight: 600">Joined up</div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-bottom: 1px solid #E2E5DF; font-size: 15px"><div style="padding: 14px 18px; color: #555555">Visit details typed into three systems</div><div style="padding: 14px 18px; border-left: 1px solid #E2E5DF">Entered once, shared everywhere</div></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-bottom: 1px solid #E2E5DF; font-size: 15px"><div style="padding: 14px 18px; color: #555555">Board pack built by hand each month</div><div style="padding: 14px 18px; border-left: 1px solid #E2E5DF">Pulled together from exports automatically</div></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-bottom: 1px solid #E2E5DF; font-size: 15px"><div style="padding: 14px 18px; color: #555555">Care notes read only after something goes wrong</div><div style="padding: 14px 18px; border-left: 1px solid #E2E5DF">Reviewed for gaps, flagged for a person to check</div></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); font-size: 15px"><div style="padding: 14px 18px; color: #555555">AI discussed at every away day</div><div style="padding: 14px 18px; border-left: 1px solid #E2E5DF">One AI workflow live, measured and owned</div></div>
+</div>
 </section>
 
-<!-- ─── FOOTER ─── -->
+<section aria-label="Experience" class="on-dark" style="background-color: #3A2234; background-image: linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px); background-size: 48px 48px; color: #FFFFFF">
+<div style="max-width: 1000px; margin: 0 auto; padding: 104px 24px">
+<p style="margin: 0 auto; max-width: 820px; text-align: center; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: clamp(26px, 3.2vw, 36px); line-height: 1.35; color: #FFFFFF">"Every hour a coordinator spends re-keying a rota is an hour less focused on supporting Doris."</p>
+<p style="margin: 16px 0 0; text-align: center; font-size: 15px; color: #D9C8D3">Phil Neilson, founder</p>
+<div style="margin-top: 56px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); border: 1px solid rgba(255,255,255,0.16); background: rgba(255,255,255,0.03)">
+<div style="padding: 28px; border: 1px solid rgba(255,255,255,0.08)"><div style="font-family: 'Newsreader', Georgia, serif; font-size: 44px; line-height: 1">17<span style="color: #D9A5C4">+</span></div><div style="margin-top: 10px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #D9C8D3">Years in UK care</div></div>
+<div style="padding: 28px; border: 1px solid rgba(255,255,255,0.08)"><div style="font-family: 'Newsreader', Georgia, serif; font-size: 44px; line-height: 1">31<span style="color: #D9A5C4">+</span></div><div style="margin-top: 10px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #D9C8D3">Care brands worked across</div></div>
+<div style="padding: 28px; border: 1px solid rgba(255,255,255,0.08)"><div style="font-family: 'Newsreader', Georgia, serif; font-size: 34px; line-height: 1.1">Board-level</div><div style="margin-top: 10px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #D9C8D3">Director for digital, data and technology</div></div>
+<div style="padding: 28px; border: 1px solid rgba(255,255,255,0.08)"><div style="font-family: 'Newsreader', Georgia, serif; font-size: 34px; line-height: 1.1">Co-founder</div><div style="margin-top: 10px; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; color: #D9C8D3">Of a technology business in care</div></div>
+</div>
+</div>
+</section>
+
+<section style="max-width: 1200px; margin: 0 auto; padding: 96px 24px 48px; display: flex; flex-wrap: wrap; gap: 48px">
+<div style="flex: 1 1 360px; min-width: 0">
+<h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: clamp(32px, 4vw, 46px); line-height: 1.1">Most providers aren't short of systems. They're short of systems that work together.</h2>
+</div>
+<div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 18px">
+<p style="margin: 0">Rostering in one place, care plans in another, finance and HR somewhere else. Reports built by hand at month end. Managers copying the same details into three screens. And plenty of talk about AI, with very little of it helping anyone on a Tuesday morning.</p>
+<p style="margin: 0">Every one of those workarounds is also a risk: a change that never reaches the rota, data held in the wrong place, a gap nobody spots until an inspector or an incident does.</p>
+<p style="margin: 0">None of that is a technology problem first. It's a process and risk problem. That's where we start.</p>
+</div>
+</section>
+
+<section id="services" style="max-width: 1200px; margin: 0 auto; padding: 48px 24px 96px">
+<div style="display: flex; flex-wrap: wrap; gap: 24px 64px; margin-bottom: 32px; align-items: start">
+<div style="flex: 1 1 260px"><p style="margin: 0 0 8px; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; color: #555555">Services</p><h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: clamp(32px, 4vw, 46px); line-height: 1.1">Four connected pieces of work</h2></div>
+<p style="flex: 2 1 480px; margin: 0; padding-top: 34px; font-size: 19px; color: #444444">Most providers need a bit of each, in roughly this order. We'll tell you honestly which ones you need now and which can wait.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px">
+<article style="background: #FFFFFF; border-radius: 4px; border-top: 3px solid #8A4A73; padding: 24px">
+<div style="font-family: 'Newsreader', Georgia, serif; font-size: 18px; color: #8A4A73">01</div>
+<h3 style="margin: 4px 0 10px; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 28px">Data</h3>
+<p style="margin: 0; font-size: 16px; color: #444444">A data strategy that starts with the questions your board and managers actually ask. Clean definitions for hours, visits, people and quality. Reporting you can trust without a weekend of spreadsheet work.</p>
+</article>
+<article style="background: #FFFFFF; border-radius: 4px; border-top: 3px solid #8A4A73; padding: 24px">
+<div style="font-family: 'Newsreader', Georgia, serif; font-size: 18px; color: #8A4A73">02</div>
+<h3 style="margin: 4px 0 10px; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 28px">Integration</h3>
+<p style="margin: 0; font-size: 16px; color: #444444">Rostering, care planning, payroll, HR and finance sharing what they know. Practical routes in, including scheduled exports where a system has no proper interface.</p>
+</article>
+<article style="background: #FFFFFF; border-radius: 4px; border-top: 3px solid #8A4A73; padding: 24px">
+<div style="font-family: 'Newsreader', Georgia, serif; font-size: 18px; color: #8A4A73">03</div>
+<h3 style="margin: 4px 0 10px; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 28px">Automation</h3>
+<p style="margin: 0; font-size: 16px; color: #444444">The checks, reconciliations, reminders and weekly reports that currently depend on someone remembering. Built to be dull and dependable.</p>
+</article>
+<article style="background: #FFFFFF; border-radius: 4px; border-top: 3px solid #8A4A73; padding: 24px">
+<div style="font-family: 'Newsreader', Georgia, serif; font-size: 18px; color: #8A4A73">04</div>
+<h3 style="margin: 4px 0 10px; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 28px">AI</h3>
+<p style="margin: 0; font-size: 16px; color: #444444">Real AI workflows for real tasks: reviewing notes, drafting, summarising, turning exports into insight. Delivered with the governance special category data demands, and handed over to your team.</p>
+</article>
+</div>
+<div style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 32px 48px; align-items: center; background: #FFFFFF; border-radius: 4px; padding: 32px">
+<svg viewBox="0 0 420 200" role="img" aria-label="Rostering, care planning, payroll and finance all connected to one shared record" style="flex: 1 1 320px; max-width: 420px; width: 100%; height: auto">
+<g fill="none" stroke="#C9CEC5" stroke-width="1.5">
+<line x1="90" y1="40" x2="210" y2="100"></line><line x1="90" y1="160" x2="210" y2="100"></line><line x1="330" y1="40" x2="210" y2="100"></line><line x1="330" y1="160" x2="210" y2="100"></line>
+</g>
+<g font-family="'Public Sans', sans-serif" font-size="13" fill="#2B2B2B" text-anchor="middle">
+<rect x="20" y="22" width="140" height="36" rx="4" fill="#EEF0EC"></rect><text x="90" y="45">Rostering</text>
+<rect x="20" y="142" width="140" height="36" rx="4" fill="#EEF0EC"></rect><text x="90" y="165">Care planning</text>
+<rect x="260" y="22" width="140" height="36" rx="4" fill="#EEF0EC"></rect><text x="330" y="45">Payroll and HR</text>
+<rect x="260" y="142" width="140" height="36" rx="4" fill="#EEF0EC"></rect><text x="330" y="165">Finance</text>
+<circle cx="210" cy="100" r="44" fill="#5A2F4B"></circle><text x="210" y="96" fill="#FFFFFF" font-size="12">One shared</text><text x="210" y="112" fill="#FFFFFF" font-size="12">record</text>
+</g>
+</svg>
+<div style="flex: 1 1 360px; min-width: 0">
+<h3 style="margin: 0 0 6px; font-size: 14px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #5A2F4B">Built on the foundations</h3>
+<p style="margin: 0 0 16px; font-size: 16px; color: #444444">None of the four works without these underneath, so we cover them too.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">IT strategy and roadmaps</span>
+<span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">System procurement and implementation</span>
+<span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Supplier and contract management</span>
+<span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Operating model and restructure</span>
+<span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Service design</span>
+<span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Change management</span>
+</div>
+</div>
+</div>
+</section>
+
+<section id="ai" class="on-dark" style="background: #5A2F4B; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px">
+<p style="margin: 0 0 12px; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; color: #E2D2DC">AI in care</p>
+<h2 style="margin: 0; max-width: 820px; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.5vw, 54px); line-height: 1.08">AI, done properly</h2>
+<p style="margin: 24px 0 0; max-width: 760px; font-size: 19px; color: #F0E6EC">AI won't fix a broken process. What it can do, very well, is take on the reading, sorting and drafting that buries your office teams. Here's how we'd approach it with you.</p>
+<div style="margin-top: 48px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px">
+<div style="background: #6B3D5B; border-radius: 6px; padding: 24px"><p style="margin: 0 0 6px; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #E2D2DC">Step 1</p><h3 style="margin: 0 0 8px; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 23px">Find the right job</h3><p style="margin: 0; font-size: 16px; color: #F0E6EC">Work that is high volume, low risk and well understood. That's where AI pays off first.</p></div>
+<div style="background: #6B3D5B; border-radius: 6px; padding: 24px"><p style="margin: 0 0 6px; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #E2D2DC">Step 2</p><h3 style="margin: 0 0 8px; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 23px">Set the guardrails</h3><p style="margin: 0; font-size: 16px; color: #F0E6EC">Data protection, a DPIA where it's needed, and clear rules on when a person reviews the output.</p></div>
+<div style="background: #6B3D5B; border-radius: 6px; padding: 24px"><p style="margin: 0 0 6px; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #E2D2DC">Step 3</p><h3 style="margin: 0 0 8px; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 23px">Keep your data in your control</h3><p style="margin: 0; font-size: 16px; color: #F0E6EC">AI runs inside systems your organisation owns, under your own information governance. Your data stays with you, in line with UK GDPR and your DSPT commitments.</p></div>
+<div style="background: #6B3D5B; border-radius: 6px; padding: 24px"><p style="margin: 0 0 6px; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; color: #E2D2DC">Step 4</p><h3 style="margin: 0 0 8px; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 23px">Measure and hand over</h3><p style="margin: 0; font-size: 16px; color: #F0E6EC">We agree what good looks like before we start, check it after, and train your people to run it.</p></div>
+</div>
+<div style="margin-top: 56px; display: flex; flex-wrap: wrap; gap: 40px">
+<div style="flex: 1 1 340px; min-width: 0">
+<h3 style="margin: 0 0 12px; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 28px">Good places to start</h3>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: #F0E6EC">
+<li>Board and commissioner reports direct from source data</li>
+<li>Care plan review reminders, and checks that plans and rotas still match</li>
+<li>Complaint and incident summaries, with themes drawn out for the quality meeting</li>
+<li>CQC and inspection evidence packs pulled together from your own records</li>
+<li>Recruitment admin and onboarding packs</li>
+</ul>
+</div>
+<div style="flex: 1 1 340px; min-width: 0; border-left: 3px solid #D9A5C4; padding-left: 24px">
+<h3 style="margin: 0 0 12px; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 28px">A human in the loop</h3>
+<p style="margin: 0 0 14px; color: #F0E6EC">AI can help inform decisions about someone's care, and occasionally that's exactly the right use of it. But a person should always own the decision. Where AI plays a part, we design in human review, a clear audit trail and an easy way to challenge the result.</p>
+<p style="margin: 0; color: #F0E6EC">And we won't promise savings before we've looked at the work. If AI isn't the right answer, we'll say so.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="approach" style="max-width: 1200px; margin: 0 auto; padding: 96px 24px">
+<p style="margin: 0 0 12px; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; color: #555555">Approach</p>
+<h2 style="margin: 0 0 16px; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: clamp(32px, 4vw, 46px)">Prove it early. Scale it with confidence.</h2>
+<p style="margin: 0 0 40px; font-size: 19px; color: #444444; max-width: 760px">Whether it's a single workflow or a programme across the whole organisation, every stage delivers something you can see and builds the case for the next.</p>
+<ol style="margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px">
+<li style="border-top: 2px solid #8A4A73; padding-top: 16px"><h3 style="margin: 0 0 8px; font-size: 19px; font-weight: 600">1. Conversation</h3><p style="margin: 0; font-size: 16px; color: #444444">An hour on what's slowing you down and what you want to change. No pitch.</p></li>
+<li style="border-top: 2px solid #8A4A73; padding-top: 16px"><h3 style="margin: 0 0 8px; font-size: 19px; font-weight: 600">2. Diagnostic</h3><p style="margin: 0; font-size: 16px; color: #444444">An honest map of your systems, data, processes and risks, and where the effort is going.</p></li>
+<li style="border-top: 2px solid #8A4A73; padding-top: 16px"><h3 style="margin: 0 0 8px; font-size: 19px; font-weight: 600">3. Prove the value</h3><p style="margin: 0; font-size: 16px; color: #444444">Early, measurable results, so your board can see the return before committing to more.</p></li>
+<li style="border-top: 2px solid #8A4A73; padding-top: 16px"><h3 style="margin: 0 0 8px; font-size: 19px; font-weight: 600">4. Scale and embed</h3><p style="margin: 0; font-size: 16px; color: #444444">Rolled out across your services, owned by your team and built into how you work.</p></li>
+</ol>
+</section>
+
+<section id="reach" style="background: #FFFFFF; border-top: 1px solid #D6DAD3; border-bottom: 1px solid #D6DAD3">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px">
+<div style="display: flex; flex-wrap: wrap; gap: 24px 64px; margin-bottom: 40px; align-items: start">
+<div style="flex: 1 1 300px"><p style="margin: 0 0 8px; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; color: #555555">Sector reach</p><h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: clamp(32px, 4vw, 46px); line-height: 1.1">Where we've worked</h2></div>
+<p style="flex: 2 1 480px; margin: 0; padding-top: 34px; font-size: 19px; color: #444444">More than 31 care brands across almost every kind of service, from national homecare networks to small specialist teams, and across every part of the organisation behind them. Whatever your service looks like, chances are we've worked with one like it.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px">
+<div><h3 style="margin: 0 0 12px; padding-bottom: 10px; border-bottom: 1px solid #D6DAD3; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; color: #5A2F4B">Homecare and community</h3><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Homecare</span><span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Live-in care</span><span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Reablement</span></div></div>
+<div><h3 style="margin: 0 0 12px; padding-bottom: 10px; border-bottom: 1px solid #D6DAD3; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; color: #5A2F4B">Complex care and supported living</h3><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Complex care</span><span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Supported living</span><span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Learning disabilities</span></div></div>
+<div><h3 style="margin: 0 0 12px; padding-bottom: 10px; border-bottom: 1px solid #D6DAD3; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; color: #5A2F4B">Extra care and specialist</h3><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Extra care</span><span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Nursing</span><span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Specialist services</span></div></div>
+<div><h3 style="margin: 0 0 12px; padding-bottom: 10px; border-bottom: 1px solid #D6DAD3; font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600; color: #5A2F4B">Children's and third sector</h3><div style="display: flex; flex-wrap: wrap; gap: 8px"><span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Children's services</span><span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Charities</span></div></div>
+</div>
+<div style="margin-top: 40px; padding-top: 32px; border-top: 2px solid #5A2F4B; display: flex; flex-wrap: wrap; gap: 20px 48px; align-items: start">
+<div style="flex: 1 1 240px"><h3 style="margin: 0 0 6px; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 26px">Across the organisation</h3><p style="margin: 0; font-size: 16px; color: #444444">The teams and functions that keep the service running.</p></div>
+<div style="flex: 3 1 520px; display: flex; flex-wrap: wrap; gap: 8px">
+<span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Rostering and scheduling</span>
+<span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Care planning and records</span>
+<span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Quality and compliance</span>
+<span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Finance and payroll</span>
+<span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">HR and recruitment</span>
+<span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">IT and information governance</span>
+<span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Acquisitions and integration</span>
+<span style="background: #EEF0EC; padding: 8px 14px; border-radius: 4px; font-size: 15px">Operating model change</span>
+</div>
+</div>
+</div>
+</section>
+
+<section id="doris" style="max-width: 860px; margin: 0 auto; padding: 96px 24px">
+<p style="margin: 0 0 12px; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; color: #555555">Why Doris</p>
+<h2 style="margin: 0 0 24px; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: clamp(32px, 4vw, 46px); line-height: 1.12">Behind every rota, record and report is a person waiting for their care. We call her Doris.</h2>
+<p style="margin: 0 0 18px">Doris isn't a real client. She's a composite of the people at the end of every system and data decision: the visit that ran late because a change didn't reach the rota, the care plan nobody could find, the family left wondering.</p>
+<p style="margin: 0">Every piece of work we do gets the same test. Does it make life better for Doris and the carers who support her? If not, it doesn't belong on the plan.</p>
+</section>
+
+<section id="about" style="max-width: 1200px; margin: 0 auto; padding: 0 24px 96px; display: flex; flex-wrap: wrap; gap: 48px; align-items: start">
+<div style="flex: 1 1 280px; max-width: 360px">
+<img src="/assets/phil-neilson.jpg" width="640" height="640" loading="lazy" decoding="async" alt="Phil Neilson, founder of Doing it for Doris" style="display: block; width: 100%; max-width: 320px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 50%; background: #DADFD8">
+</div>
+<div style="flex: 999 1 480px; min-width: 0">
+<p style="margin: 0 0 12px; font-size: 15px; letter-spacing: 1.5px; text-transform: uppercase; color: #555555">About Phil</p>
+<p style="margin: 0 0 18px; font-family: 'Newsreader', Georgia, serif; font-size: 28px; line-height: 1.35">I've worked in UK care for more than 17 years, leading digital, data and technology as a board-level Director on the provider side.</p>
+<p style="margin: 0 0 18px; color: #444444">I've worked across more than 31 care brands. I've bought the software, built the integrations, run the go-lives and dealt with the fallout when things went wrong. I've also co-founded a technology business in care, so I know what it takes to build products, not just buy them. A lot of my time now goes on how AI can lift the admin burden in care without putting safety or dignity at risk.</p>
+<p style="margin: 0 0 32px; color: #444444">Every engagement is led by me personally, with the right specialists alongside when the work calls for them. Small enough to know your organisation properly, experienced enough to see it through.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px">
+<div style="border-top: 1px solid #C9CEC5; padding-top: 14px"><h3 style="margin: 0 0 6px; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 22px">Honest before comfortable</h3><p style="margin: 0; font-size: 16px; color: #444444">Straight answers, including "you don't need this yet".</p></div>
+<div style="border-top: 1px solid #C9CEC5; padding-top: 14px"><h3 style="margin: 0 0 6px; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 22px">Operational first</h3><p style="margin: 0; font-size: 16px; color: #444444">Designed for the branch on a busy Monday, not the slide deck.</p></div>
+<div style="border-top: 1px solid #C9CEC5; padding-top: 14px"><h3 style="margin: 0 0 6px; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 22px">Your data stays yours</h3><p style="margin: 0; font-size: 16px; color: #444444">Work happens in your own systems, under your governance.</p></div>
+</div>
+</div>
+</section>
+
+<section id="contact" class="on-dark" style="background-color: #3A2234; background-image: linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px); background-size: 48px 48px; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; display: flex; flex-wrap: wrap; gap: 40px; align-items: end; justify-content: space-between">
+<div style="flex: 999 1 560px; min-width: 0">
+<h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: clamp(36px, 5vw, 58px); line-height: 1.06">Not sure where to start? That <em style="font-style: italic">is</em> the right place to start.</h2>
+<p style="margin: 20px 0 0; font-size: 20px; color: #E8DCE4; max-width: 640px">Tell us what's eating your team's time. We'll give you a straight view on whether data, systems, integration, automation or AI could help.</p>
+</div>
+<div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 14px">
+<a href="mailto:phil@doingitfordoris.com" style="text-decoration: none; background: #FFFFFF; color: #3A2234; padding: 18px 28px; border-radius: 6px; font-weight: 600; text-align: center">Start a conversation</a>
+<a href="https://www.linkedin.com/in/phil-neilson/" style="text-align: center; padding: 10px; color: #FFFFFF">Connect on LinkedIn</a>
+</div>
+</div>
+</section>
+
+</main>
+
 <footer>
-  <div class="footer-copy">&copy; 2025 Doing it for Doris Consulting. All rights reserved.</div>
-  <div class="footer-links">
-    <a href="mailto:Phil@DoingItForDoris.com">Contact</a>
-    <a href="https://www.linkedin.com/in/phil-neilson" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="#">Privacy</a>
-  </div>
+<div style="max-width: 1200px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; gap: 12px 32px; justify-content: space-between; font-size: 14px; color: #555555">
+<span>Doing it for Doris Consulting. Digital, data and AI for UK health and social care.</span>
+<span><a href="/privacy.html">Privacy</a></span>
+</div>
 </footer>
 
-<!-- ─── JS ─── -->
-<script>
-  // Nav scroll behaviour
-  const nav = document.getElementById('main-nav');
-  function updateNav() {
-    if (window.scrollY > 80) {
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  }
-  window.addEventListener('scroll', updateNav);
-  updateNav();
-
-  // Mobile menu
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.getElementById('nav-links');
-  hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-  });
-  navLinks.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => navLinks.classList.remove('open'));
-  });
-
-  // Fade-in on scroll
-  const fadeEls = document.querySelectorAll('.fade-in');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  fadeEls.forEach(el => observer.observe(el));
-</script>
-
+</div>
+<!-- Cloudflare Web Analytics (cookieless). REPLACE CF_BEACON_TOKEN with the site token from the Cloudflare dashboard before merging. -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "CF_BEACON_TOKEN"}'></script>
 </body>
 </html>
